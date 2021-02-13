@@ -1,5 +1,5 @@
 {
-    "description": "Register Response Schema",
+    "description": "Login Response Schema",
     "type": "object",
     "properties": {
       "user": {

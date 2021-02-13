@@ -12,7 +12,7 @@ Cenário: Registrar novo usuário com dados válidos
     Quando eu realizar a requisição para registrar um novo usuário
     Então valido o status code 200
     E valido os dados de retorno da response
-    E valido o contrato da API
+    E valido o contrato da API para o register
 
 # @registrar_usuario_campo_invalido
 # Esquema do Cenário: Registrar usuário com dados inválidos
@@ -33,6 +33,7 @@ Esquema do Cenário: Registrar usuário com campo vazio
     E valido a mensagem de retorno <mensagem>
 
     Exemplos:
+
     | field      |statuscode|  mensagem      |        
     |   "name"   |   200    |  "OK"          |
     |   "email"  |   400    |  "Bad Request" |
@@ -47,10 +48,12 @@ Esquema do Cenário: Registrar usuário com campo vazio
     E valido a mensagem de retorno <mensagem>
 
     Exemplos:
+
     | field      |statuscode|  mensagem      |        
     |   "name"   |   200    |  "OK"          |
     |   "email"  |   400    |  "Bad Request" |
     | "password" |   400    |  "Bad Request" |
+
 
 @registrar_usuario_ja_existente
 Cenário: Registrar usuário já cadastrado no sistema

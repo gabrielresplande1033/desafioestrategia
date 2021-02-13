@@ -8,7 +8,7 @@ Então('valido os dados de retorno da response') do
     expect(@request_body['email']).to eql(@user['email'])
 end
 
-Então('valido o contrato da API') do
+Então('valido o contrato da API para o register') do
     expect(@response.body).to match_json_schema("register_schema") 
 end
 

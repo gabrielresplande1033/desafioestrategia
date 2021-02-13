@@ -1,0 +1,80 @@
+{
+    "description": "Project Response Schema",
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "object",
+        "properties": {
+          "tasks": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "completed": {
+                    "type": "boolean"
+                  },
+                  "_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "assignedTo": {
+                    "type": "string"
+                  },
+                  "project": {
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "type": "string"
+                  },
+                  "__v": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "completed",
+                  "_id",
+                  "name",
+                  "assignedTo",
+                  "project",
+                  "createdAt",
+                  "__v"
+                ]
+              }
+            ]
+          },
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "__v": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "_id",
+          "title",
+          "description",
+          "user",
+          "createdAt",
+          "__v"
+        ]
+      }
+    },
+    "required": [
+      "project"
+    ]
+  }
