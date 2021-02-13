@@ -1,0 +1,40 @@
+{
+    "description": "Register Response Schema",
+    "type": "object",
+    "properties": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "__v": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "_id",
+          "name",
+          "email",
+          "createdAt",
+          "__v"
+        ]
+      },
+      "token": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "user",
+      "token"
+    ]
+  }
