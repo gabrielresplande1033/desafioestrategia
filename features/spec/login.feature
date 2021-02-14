@@ -4,7 +4,7 @@
 Funcionalidade: Realizar login
 Como usuário do sistema
 Eu quero realizar requisições na api
-A fim de me autenticar no sistema
+Para me autenticar no sistema
 
 @efetuar_login
 Esquema do Cenário: Efetuar autenticação no sistema
@@ -15,10 +15,10 @@ Esquema do Cenário: Efetuar autenticação no sistema
 
     Exemplos:
 
-    |       email               |  password  |
+    | email                     | password   |
     | gbl_marcelino@hotmail.com | teste652   |
-    | joao.da.silva@hotmail.com |  12356     |  
-    |    mariaa@hotmail.com     |  88888889  |     
+    | joao.da.silva@hotmail.com | 12356      |  
+    | mariaa@hotmail.com        | 88888889   |     
     | pedro.sampaio@hotmail.com | f%4$-02)+_ |
 
 @efetuar_login_invalido
@@ -30,9 +30,9 @@ Esquema do Cenário: Efetuar autenticação com campo inválido
 
     Exemplos:
 
-    | field      |  value                 |    message        |
-    | "email"    |  "naoexiste@gmail.com" | "User not found"  | 
-    | "password" |  "senhainvalida"       | "Invalid password"|
+    | field      |  value                | message           |
+    | "email"    | "naoexiste@gmail.com" | "User not found"  | 
+    | "password" | "senhainvalida"       | "Invalid password"|
 
 @efetuar_login_campo_vazio
 Esquema do Cenário: Efetuar login com campo vazio
@@ -43,8 +43,8 @@ Esquema do Cenário: Efetuar login com campo vazio
 
     Exemplos:
 
-    | field      |  message          |        
-    |   "email"  | "User not found"  |
+    | field      | message           |        
+    | "email"    | "User not found"  |
     | "password" | "Invalid password"|
 
 @efetuar_login_campo_nulo
@@ -56,6 +56,6 @@ Esquema do Cenário: Efetuar login com campo nulo
 
     Exemplos:
 
-    | field      |  message          |        
-    |   "email"  | "User not found"  |
+    | field      | message           |        
+    | "email"    | "User not found"  |
     | "password" | "Invalid password"|

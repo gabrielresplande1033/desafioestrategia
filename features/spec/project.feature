@@ -28,11 +28,11 @@ Esquema do Cenário: Criar novo projeto com campo vazio
 
     Exemplos:
 
-    |    field      |statuscode|           mensagem            |        
-    |    "title"    |   200    |              'OK'             |
-    | "description" |   200    |              'OK'             |
-    |     "name"    |   200    |              'OK'             |
-    | "assignedTo"  |   400    |  "Error creating new project" |
+    | field         |statuscode| mensagem                     |        
+    | "title"       | 200      | 'OK'                         |
+    | "description" | 200      | 'OK'                         |
+    | "name"        | 200      | 'OK'                         |
+    | "assignedTo"  | 400      | "Error creating new project" |
 
 @criar_projeto_campo_nulo
 Esquema do Cenário: Criar novo projeto com campo nulo
@@ -45,11 +45,11 @@ Esquema do Cenário: Criar novo projeto com campo nulo
 
     Exemplos:
 
-    |    field      |statuscode|           mensagem            |        
-    |    "title"    |   200    |              'OK'             |
-    | "description" |   200    |              'OK'             |
-    |     "name"    |   200    |              'OK'             |
-    | "assignedTo"  |   200    |              'OK'             |
+    | field         | statuscode| mensagem |        
+    | "title"       | 200       | 'OK'     |
+    | "description" | 200       | 'OK'     |
+    | "name"        | 200       | 'OK'     |
+    | "assignedTo"  | 200       | 'OK'     |
 
 @criar_projeto_para_usuario_inexistente
 Cenário: Criar novo projeto para usuario inexistente

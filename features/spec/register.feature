@@ -34,10 +34,10 @@ Esquema do Cenário: Registrar usuário com campo vazio
 
     Exemplos:
 
-    | field      |statuscode|  mensagem      |        
-    |   "name"   |   200    |  "OK"          |
-    |   "email"  |   400    |  "Bad Request" |
-    | "password" |   400    |  "Bad Request" |
+    | field      | statuscode| mensagem      |        
+    | "name"     | 200       | "OK"          |
+    | "email"    | 400       | "Bad Request" |
+    | "password" | 400       | "Bad Request" |
 
 @registrar_usuario_campo_nulo
 Esquema do Cenário: Registrar usuário com campo vazio
@@ -48,10 +48,10 @@ Esquema do Cenário: Registrar usuário com campo vazio
 
     Exemplos:
 
-    | field      |statuscode|  mensagem      |        
-    |   "name"   |   200    |  "OK"          |
-    |   "email"  |   400    |  "Bad Request" |
-    | "password" |   400    |  "Bad Request" |
+    | field      | statuscode | mensagem      |        
+    | "name"     | 200        | "OK"          |
+    | "email"    | 400        | "Bad Request" |
+    | "password" | 400        | "Bad Request" |
 
 @registrar_usuario_ja_existente
 Cenário: Registrar usuário já cadastrado no sistema
