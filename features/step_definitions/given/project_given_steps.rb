@@ -6,7 +6,7 @@ end
 Dado('possua um token valido') do
     @token = @response["token"]
     @user = @response.parsed_response["user"]
-    @userId = @user["_id"]
+    @user_id = @user["_id"]
 end
 
 Dado('possua dados validos para criar um projeto') do
@@ -37,4 +37,8 @@ Dado('que eu tenha um id de projeto criado') do
     step "eu realizar a requisição para criar um novo projeto com campos e token validos"
     @project = @response.parsed_response["project"]
     @project_id = @project["tasks"][0]["project"]
+end
+
+Dado('que eu tenha um id de projeto inexistente') do
+    @project_id = "329103903292813"
 end

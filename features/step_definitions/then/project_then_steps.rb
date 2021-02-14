@@ -7,7 +7,7 @@ Então('valido o retorno dos dados do projeto na response') do
 end
 
 Então('valido que o projeto foi associado ao usuario do token') do
-    expect(@userId).to eql(@project["user"])
+    expect(@user_id).to eql(@project["user"])
 end
 
 Então('valido o contrato da API para criação de posts') do

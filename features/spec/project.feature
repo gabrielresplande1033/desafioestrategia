@@ -89,5 +89,12 @@ Cenário: Retornar projeto por id
     Então valido o status code 200
     E valido que o projeto retornado possui o mesmo id que busquei
 
-
+@retornar_projeto_inexistente
+Cenário: Retornar projeto com id inexistente
+    Dado que eu tenha logado no sistema com as credenciais "gbl_marcelino@hotmail.com" e "teste652"
+    E possua um token valido
+    E que eu tenha um id de projeto inexistente
+    Quando eu realizar uma requisição para retornar esse projeto
+    Então valido o status code 400
+    E valido o retorno "Error loading project"
 
