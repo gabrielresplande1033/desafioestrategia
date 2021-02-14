@@ -11,7 +11,6 @@ end
 
 Dado('possua dados validos para criar um projeto') do
     @request_body = generate_project_payload_with_valid_fields()
-    puts @request_body
 end
 
 Dado('possua dados validos para criar um projeto com o campo {string} vazio') do |field|
@@ -41,4 +40,8 @@ end
 
 Dado('que eu tenha um id de projeto inexistente') do
     @project_id = "329103903292813"
+end
+
+Dado('dados para adicionar tasks a esse projeto') do
+    @request_body = generate_project_payload_with_multiple_tasks()
 end

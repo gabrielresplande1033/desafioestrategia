@@ -18,8 +18,18 @@ class Project
             headers: {"Authorization" => "Bearer #{token}"})
     end
 
-    def get_project_by_id(projectId, token)
-        self.class.get("/projects/#{projectId}", 
+    def get_project_by_id(project_id, token)
+        self.class.get("/projects/#{project_id}", 
+            headers: {"Authorization" => "Bearer #{token}"})
+    end
+
+    def put_project(request_body, project_id, token)
+        self.class.get("/projects/#{project_id}", body: request_body.to_json,
+            headers: {"Authorization" => "Bearer #{token}"})
+    end
+
+    def delete(project_id, token)
+        self.class.delete("/projects/#{project_id}", 
             headers: {"Authorization" => "Bearer #{token}"})
     end
 

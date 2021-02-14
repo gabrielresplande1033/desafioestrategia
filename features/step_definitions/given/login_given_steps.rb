@@ -1,6 +1,5 @@
 Dado('que possuo credenciais {string} e {string} válidas') do |email, password|
     @request_body = generate_login_payload(email, password)
-    puts @request_body
 end
 
 Dado('que eu possuo as credenciais para login com o campo {string} com valor {string} inválido') do |field, value|

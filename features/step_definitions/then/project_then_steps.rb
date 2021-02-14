@@ -21,3 +21,8 @@ end
 Então('valido que o projeto retornado possui o mesmo id que busquei') do
     expect(@project_id).to eql(@response["project"]["_id"])
 end
+
+Então('valido que esse projeto nao consta mais na busca por projeto') do
+    @response = @project_service.get_project_by_id(@project_id, @token)
+    expect(@response["project"]).to eql(nil)
+end

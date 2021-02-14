@@ -20,5 +20,12 @@ end
 
 Quando('eu realizar uma requisição para retornar esse projeto') do
     @response = @project_service.get_project_by_id(@project_id, @token)
-    puts @response
+end
+
+Quando('eu realizar uma requisição para alterar um projeto') do
+    @response = @project_service.put_project(@request_body, @project_id, @token)
+end
+
+Quando('eu realizar uma requisição para deletar esse projeto') do
+    @response = @project_service.delete(@project_id, @token)
 end

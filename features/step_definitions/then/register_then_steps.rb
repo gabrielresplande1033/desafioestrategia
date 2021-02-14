@@ -1,5 +1,4 @@
 Então('valido o status code {int}') do |status_code|
-    puts @response
     expect(@response.code).to eq(status_code)
 end
 

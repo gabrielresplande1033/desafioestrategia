@@ -98,3 +98,25 @@ Cenário: Retornar projeto com id inexistente
     Então valido o status code 400
     E valido o retorno "Error loading project"
 
+@adicionar_tasks_ao_projeto
+Cenário: Adicionar tasks a um projeto ja existente
+    Dado que eu tenha um id de projeto criado
+    E dados para adicionar tasks a esse projeto
+    Quando eu realizar uma requisição para alterar um projeto
+    Então valido o status code 200
+
+@deletar_projeto
+Cenário: Deletar projeto
+    Dado que eu tenha um id de projeto criado
+    Quando eu realizar uma requisição para deletar esse projeto
+    Então valido o status code 200
+    E valido que esse projeto nao consta mais na busca por projeto
+
+@deletar_projeto_inexistente
+Cenário: Deletar projeto inexistente
+    Dado que eu tenha logado no sistema com as credenciais "gbl_marcelino@hotmail.com" e "teste652"
+    E possua um token valido
+    E que eu tenha um id de projeto inexistente
+    Quando eu realizar uma requisição para deletar esse projeto
+    Então valido o status code 400
+    E valido o retorno "Error deleting project"
