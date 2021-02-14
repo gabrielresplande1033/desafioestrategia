@@ -1,4 +1,5 @@
 Então('valido o status code {int}') do |status_code|
+    puts @response
     expect(@response.code).to eq(status_code)
 end
 
@@ -17,7 +18,11 @@ Então('valido a mensagem de retorno {string}') do |message|
 end
 
 Então('valido o retorno {string}') do |message|
-    @error = @response.parsed_response['error']
-    expect(@error).to eql(message)
+    if(@response.code == 400 || @response.code == 401)
+        @response_message = @response.parsed_response['error']
+    else
+        @response_message = @response.message
+    end
+    expect(@response_message).to eql(message)
 end
 

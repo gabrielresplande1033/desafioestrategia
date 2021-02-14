@@ -13,4 +13,14 @@ class Project
             headers: {"Authorization" => "Bearer #{token}"})
     end
 
+    def get(token)
+        self.class.get("/projects", 
+            headers: {"Authorization" => "Bearer #{token}"})
+    end
+
+    def get_project_by_id(projectId, token)
+        self.class.get("/projects/#{projectId}", 
+            headers: {"Authorization" => "Bearer #{token}"})
+    end
+
 end

@@ -39,7 +39,6 @@ Esquema do Cenário: Registrar usuário com campo vazio
     |   "email"  |   400    |  "Bad Request" |
     | "password" |   400    |  "Bad Request" |
 
-
 @registrar_usuario_campo_nulo
 Esquema do Cenário: Registrar usuário com campo vazio
     Dado que eu deseje realizar uma requisição de registro com o campo <field> nulo
@@ -54,10 +53,10 @@ Esquema do Cenário: Registrar usuário com campo vazio
     |   "email"  |   400    |  "Bad Request" |
     | "password" |   400    |  "Bad Request" |
 
-
 @registrar_usuario_ja_existente
 Cenário: Registrar usuário já cadastrado no sistema
     Dado que eu possua os dados de um usuário já criado
     Quando eu realizar a requisição para registrar um novo usuário
     Então valido o status code 400
     E valido o retorno "User Already Exists"
+
