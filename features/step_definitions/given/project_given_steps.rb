@@ -10,7 +10,7 @@ Dado('possua um token valido') do
 end
 
 Dado('possua dados validos para criar um projeto') do
-    @request_body = generate_project_payload_with_valid_fields()
+    @request_body = generate_project_payload_with_valid_fields
 end
 
 Dado('possua dados validos para criar um projeto com o campo {string} vazio') do |field|
@@ -22,7 +22,7 @@ Dado('possua dados validos para criar um projeto com o campo {string} nulo') do 
 end
 
 Dado('possua dados validos para criar um projeto com uma task assinada para um usuário inexistente') do
-    @request_body = generate_project_payload_for_nonexistent_user()
+    @request_body = generate_project_payload_for_nonexistent_user
 end
 
 Dado('que eu possua um token invalido') do
@@ -43,5 +43,5 @@ Dado('que eu tenha um id de projeto inexistente') do
 end
 
 Dado('dados para adicionar tasks a esse projeto') do
-    @request_body = generate_project_payload_with_multiple_tasks()
+    @request_body = generate_project_payload_with_multiple_tasks
 end

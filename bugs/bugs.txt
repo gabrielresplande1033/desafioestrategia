@@ -1,0 +1,9 @@
+1 - Quando utilizo o endpoint de delete, o projeto não é de fato deletado, ao consultar esse projeto
+ele está com o parametrô "null".
+
+2 - Campo AssignedTo está aceitando valores nulos, a request não falha e a informação é salva.
+
+3 - Para os endpoints que criam recurso, o correto é utilizar o código 201, e não 200.
+
+4 - Adicionar validações nos campos, todos estão aceitando qualquer informação, desde que não seja
+nulo ou vazio (com excessão do campo AssignedTo).

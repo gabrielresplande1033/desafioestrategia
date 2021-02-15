@@ -27,5 +27,6 @@ Quando('eu realizar uma requisição para alterar um projeto') do
 end
 
 Quando('eu realizar uma requisição para deletar esse projeto') do
+    puts @project_id
     @response = @project_service.delete(@project_id, @token)
 end
